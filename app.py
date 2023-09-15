@@ -5,11 +5,11 @@ from datetime import datetime
 app = Flask(__name__)
 
 
-@app.route('/')
-def index():
-    return 'Hello from Flask!'
+# @app.route('/')
+# def index():
+#     return 'Hello from shubham!'
 
-@app.route('/about')
+@app.route('/')
 def about():
     return render_template('index.html')
 
