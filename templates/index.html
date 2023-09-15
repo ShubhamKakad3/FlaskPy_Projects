@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width", initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+
     <title>my first flask app</title>
     <style>
         h1{
@@ -37,13 +38,12 @@
         }
 
         .container{
+            text-align: center;
+
             max-width: 720px;
             margin: auto;
         }
-        .div{
-            text-align: center;
-            
-        }
+        
         .button{
             font-size: 15px;
             text-align: center;
@@ -64,23 +64,38 @@
 
 
     </style>
+
 </head>
 <body>
+    {% include 'nav.html' %}
+
     <div class="container">
-    <h1>A {{ab}} WEBSITE</h1>
-    <img  class="image" src="http://127.0.0.1:81/static/download2.jpg" height="320px" alt="">
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque adipisci numquam esse aliquid, fugiat, dolor, tempora incidunt corporis voluptatem nisi officia dolorem autem voluptate libero sequi temporibus sunt quidem unde? Ratione labore at ipsa tempore deserunt mollitia sed totam ducimus molestiae maiores laboriosam accusamus nesciunt dolor, recusandae illum architecto eos, unde nemo doloribus ad animi. Atque quia amet, beatae eius tempore enim! Aut, dolore ipsum expedita et molestiae dignissimos? Rem, unde facere ut quae dolorem mollitia nemo, recusandae laborum, temporibus cumque id voluptatibus laboriosam quisquam. Blanditiis recusandae enim fuga? Hic cupiditate ex repudiandae impedit voluptatum quas amet nam doloremque? Aliquid.</p>
-    <h2>JOB OPENING </h2>
-    <div>
-       
+        <img  class="image" src="http://127.0.0.1:81/static/download2.jpg" height="320px" alt="">
+    
+        <h1>A {{ab}} WEBSITE</h1>
+
+        <div class="row">
+            <div class="col-6">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque adipisci numquam esse aliquid, fugiat, dolor, tempora incidunt corporis voluptatem nisi officia dolorem autem voluptate libero sequi temporibus sunt quidem unde? Ratione labore at ipsa tempore deserunt mollitia sed totam ducimus molestiae maiores laboriosam accusamus nesciunt dolor, recusandae illum architecto eos, unde nemo doloribus ad animi. Atque quia amet, beatae eius tempore enim! Aut, dolore ipsum expedita et molestiae dignissimos? Rem, unde facere ut quae dolorem mollitia nemo, recusandae laborum, temporibus cumque id voluptatibus laboriosam quisquam. Blanditiis recusandae enim fuga? Hic cupiditate ex repudiandae impedit voluptatum quas amet nam doloremque? Aliquid.</p>
+            </div>   
+            <div class="col-6">
+                <img src="static/download.jpg">
+            </div>
+        </div>
+
+        <h2>JOB OPENING </h2>
+        <div>
+     
             {% for job in jobs %}
                 {% include  'index1.html'  %}
             {% endfor %}
         
-    </div>  
-    <div class="div"">
-    <button class="button" >Contact Us</button>
+        </div>  
+        <div class="div"">
+        <button class="button" >Contact Us</button>
+        </div>
     </div>
-</div>
 </body>
+<hr>
+ {% include 'footer.html'  %}
 </html>
