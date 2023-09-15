@@ -27,7 +27,7 @@ JOBS = [
    'id' : 1,
    'title' : 'frontend developer',
    'location':'banglore,india',
-   'salory':'Rs. 15,00,000'
+   'salory':'Rs. 20,00,000'
    }
 ]
 
