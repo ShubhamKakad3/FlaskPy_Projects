@@ -70,7 +70,7 @@
     {% include 'nav.html' %}
 
     <div class="container">
-        <img  class="image" src="http://127.0.0.1:81/static/download2.jpg" height="320px" alt="">
+        <img  class="image" src="http://127.0.0.1:81/static/download2.jpg" height="320px" margin-bottom="20px"     >
     
         <h1>A {{ab}} WEBSITE</h1>
 
@@ -83,7 +83,7 @@
             </div>
         </div>
 
-        <h2>JOB OPENING </h2>
+        <h2 style="margin-top: 16px;">JOB OPENING </h2>
         <div>
      
             {% for job in jobs %}
@@ -92,7 +92,7 @@
         
         </div>  
         <div class="div"">
-        <button class="button" >Contact Us</button>
+        <button class="button"><a href="mailto:example@gmail.com?subject=question%20about%20job%20opening&body=My%20Name%20%3A%20%3Cyour%20name%3E%0D%0AMy%20Questions%20%3A%20%3Cquestions%3E%0D%0A%0D%0A">Contact Us</a></button>
         </div>
     </div>
 </body>
